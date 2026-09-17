@@ -3993,10 +3993,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Switch:SW_Push"
-			(pin_numbers
-				(hide yes)
-			)
+		(symbol "Switch:SW_Push_Dual"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -4007,18 +4004,17 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "SW"
-				(at 1.27 2.54 0)
+				(at 0 7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
-			(property "Value" "SW_Push"
-				(at 0 -1.524 0)
+			(property "Value" "SW_Push_Dual"
+				(at 0 -6.35 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -4028,7 +4024,7 @@
 				)
 			)
 			(property "Footprint" ""
-				(at 0 5.08 0)
+				(at 0 7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -4039,7 +4035,7 @@
 				)
 			)
 			(property "Datasheet" ""
-				(at 0 5.08 0)
+				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -4049,7 +4045,7 @@
 					)
 				)
 			)
-			(property "Description" "Push button switch, generic, two pins"
+			(property "Description" "Push button switch, generic, symbol, four pins"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -4071,9 +4067,20 @@
 					)
 				)
 			)
-			(symbol "SW_Push_0_1"
+			(symbol "SW_Push_Dual_0_1"
 				(circle
-					(center -2.032 0)
+					(center -2.032 2.54)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -2.032 -2.54)
 					(radius 0.508)
 					(stroke
 						(width 0)
@@ -4085,7 +4092,67 @@
 				)
 				(polyline
 					(pts
-						(xy 0 1.27) (xy 0 3.048)
+						(xy 0 3.81) (xy 0 5.588)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 3.048) (xy 0 3.556)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.032) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.016) (xy 0 1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.508) (xy 0 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -0.508) (xy 0 -1.016)
 					)
 					(stroke
 						(width 0)
@@ -4096,7 +4163,18 @@
 					)
 				)
 				(circle
-					(center 2.032 0)
+					(center 2.032 2.54)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 -2.54)
 					(radius 0.508)
 					(stroke
 						(width 0)
@@ -4108,7 +4186,19 @@
 				)
 				(polyline
 					(pts
-						(xy 2.54 1.27) (xy -2.54 1.27)
+						(xy 2.54 3.81) (xy -2.54 3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -1.27) (xy -2.54 -1.27)
 					)
 					(stroke
 						(width 0)
@@ -4119,7 +4209,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 0 0)
+					(at -5.08 2.54 0)
 					(length 2.54)
 					(name "1"
 						(effects
@@ -4137,7 +4227,7 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 0 180)
+					(at 5.08 2.54 180)
 					(length 2.54)
 					(name "2"
 						(effects
@@ -4152,6 +4242,55 @@
 								(size 1.27 1.27)
 							)
 						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 2.54)
+					(name "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 2.54)
+					(name "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "SW_Push_Dual_1_1"
+				(rectangle
+					(start -3.175 5.715)
+					(end 3.175 -4.445)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
 					)
 				)
 			)
@@ -5374,6 +5513,12 @@
 		(uuid "0c83efdf-b4bd-4c68-952d-f3d85bbbcca8")
 	)
 	(junction
+		(at 92.71 130.81)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "108d2971-9eae-40e5-a937-bd0d5ccda3fa")
+	)
+	(junction
 		(at 55.88 138.43)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5428,7 +5573,7 @@
 		(uuid "2ec13735-c4a3-403b-88db-09ae07bc81f9")
 	)
 	(junction
-		(at 99.06 134.62)
+		(at 106.68 130.81)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "31231680-cbc8-4b3b-9631-34154b67a588")
@@ -5450,6 +5595,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "538e2e8a-6042-4b5c-b3b2-0721ff290049")
+	)
+	(junction
+		(at 92.71 120.65)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "55f6a448-4282-4c28-95d7-92f687e735fe")
 	)
 	(junction
 		(at 240.03 110.49)
@@ -5498,6 +5649,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6edf29dc-f4e2-4aa6-874b-12d681b15415")
+	)
+	(junction
+		(at 102.87 120.65)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "727f1c59-2d3d-4ca6-9ea2-3706aade19b2")
 	)
 	(junction
 		(at 73.66 138.43)
@@ -5642,6 +5799,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d550b03b-d3e0-468b-997e-65aab58127d7")
+	)
+	(junction
+		(at 102.87 130.81)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d69bdc44-b62a-4b27-9f83-4bb70d1b6f10")
 	)
 	(junction
 		(at 157.48 85.09)
@@ -5799,7 +5962,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 124.46) (xy 99.06 124.46)
+			(xy 102.87 120.65) (xy 106.68 120.65)
 		)
 		(stroke
 			(width 0)
@@ -6309,7 +6472,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 134.62) (xy 99.06 134.62)
+			(xy 102.87 130.81) (xy 106.68 130.81)
 		)
 		(stroke
 			(width 0)
@@ -6629,7 +6792,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 124.46) (xy 99.06 134.62)
+			(xy 106.68 120.65) (xy 106.68 130.81)
 		)
 		(stroke
 			(width 0)
@@ -6736,6 +6899,16 @@
 			(type default)
 		)
 		(uuid "6a27f3c9-0796-40ca-bc4f-a011c4794d78")
+	)
+	(wire
+		(pts
+			(xy 102.87 115.57) (xy 102.87 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6affe768-8d22-4ebd-a3a3-8023b5530bd0")
 	)
 	(wire
 		(pts
@@ -7309,6 +7482,16 @@
 	)
 	(wire
 		(pts
+			(xy 92.71 130.81) (xy 92.71 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99177139-b593-469b-822e-2d177891f9ed")
+	)
+	(wire
+		(pts
 			(xy 257.81 146.05) (xy 259.08 146.05)
 		)
 		(stroke
@@ -7469,6 +7652,16 @@
 	)
 	(wire
 		(pts
+			(xy 92.71 115.57) (xy 92.71 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a6be768c-e8ea-4c5c-b103-20becc43dc51")
+	)
+	(wire
+		(pts
 			(xy 215.9 119.38) (xy 215.9 120.65)
 		)
 		(stroke
@@ -7509,6 +7702,16 @@
 	)
 	(wire
 		(pts
+			(xy 102.87 130.81) (xy 102.87 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af263b88-ff71-4e18-9a6c-6e0e43b243b4")
+	)
+	(wire
+		(pts
 			(xy 99.06 92.71) (xy 101.6 92.71)
 		)
 		(stroke
@@ -7519,7 +7722,7 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 134.62) (xy 85.09 134.62)
+			(xy 90.17 130.81) (xy 92.71 130.81)
 		)
 		(stroke
 			(width 0)
@@ -7949,7 +8152,7 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 124.46) (xy 85.09 124.46)
+			(xy 90.17 120.65) (xy 92.71 120.65)
 		)
 		(stroke
 			(width 0)
@@ -8239,7 +8442,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 134.62) (xy 99.06 135.89)
+			(xy 106.68 130.81) (xy 106.68 132.08)
 		)
 		(stroke
 			(width 0)
@@ -9047,7 +9250,7 @@
 	)
 	(global_label "{slash}RESET"
 		(shape input)
-		(at 82.55 124.46 180)
+		(at 90.17 120.65 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -9057,7 +9260,7 @@
 		)
 		(uuid "84216046-bc43-402a-9e97-cc559956e025")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 74.6282 124.46 0)
+			(at 82.2482 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9479,7 +9682,7 @@
 	)
 	(global_label "{slash}FLASH"
 		(shape input)
-		(at 82.55 134.62 180)
+		(at 90.17 130.81 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -9489,7 +9692,7 @@
 		)
 		(uuid "d903d8e6-690f-46cd-a05a-e7d2e161e933")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 74.6284 134.62 0)
+			(at 82.2484 130.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9850,7 +10053,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 144.272 80.01 90)
 			(hide yes)
 			(show_name no)
@@ -9932,7 +10135,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P7.62mm_Horizontal"
 			(at 165.1 33.02 0)
 			(hide yes)
 			(show_name no)
@@ -10012,7 +10215,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_JST:JST_NV_B02P-NV_1x02_P5.00mm_Vertical"
 			(at 15.24 24.13 0)
 			(hide yes)
 			(show_name no)
@@ -10442,7 +10645,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_LCC:PLCC-44_16.6x16.6mm_P1.27mm"
+		(property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm"
 			(at 20.0152 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -10602,7 +10805,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 72.898 100.33 90)
 			(hide yes)
 			(show_name no)
@@ -10681,7 +10884,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_LongPads"
 			(at 271.78 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -10799,7 +11002,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 241.808 115.57 90)
 			(hide yes)
 			(show_name no)
@@ -10881,7 +11084,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm"
 			(at 235.9152 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -11041,7 +11244,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm"
 			(at 59.3852 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -11122,7 +11325,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 38.608 142.24 90)
 			(hide yes)
 			(show_name no)
@@ -11407,7 +11610,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 72.898 90.17 90)
 			(hide yes)
 			(show_name no)
@@ -11489,7 +11692,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm"
 			(at 258.7752 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -11649,7 +11852,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm"
 			(at 205.4352 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -11807,7 +12010,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 86.36 41.402 90)
 			(hide yes)
 			(show_name no)
@@ -11889,7 +12092,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_JST:JST_NV_B02P-NV_1x02_P5.00mm_Vertical"
 			(at 191.77 17.78 0)
 			(hide yes)
 			(show_name no)
@@ -11944,7 +12147,7 @@
 		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -11971,7 +12174,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Fuse:Fuseholder_Cylinder-5x20mm_Stelvio-Kontek_PTF78_Horizontal_Open"
 			(at 170.942 22.86 90)
 			(hide yes)
 			(show_name no)
@@ -12131,7 +12334,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm"
 			(at 67.0052 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -12369,7 +12572,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm"
 			(at 195.2752 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -12449,7 +12652,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 135.89 61.468 90)
 			(hide yes)
 			(show_name no)
@@ -12531,7 +12734,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 217.678 115.57 90)
 			(hide yes)
 			(show_name no)
@@ -12611,7 +12814,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-8_W7.62mm_LongPads"
 			(at 91.44 92.71 0)
 			(hide yes)
 			(show_name no)
@@ -12789,7 +12992,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0614_L14.3mm_D5.7mm_P15.24mm_Horizontal"
 			(at 170.942 80.01 90)
 			(hide yes)
 			(show_name no)
@@ -12869,7 +13072,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical"
 			(at 26.67 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -12957,7 +13160,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 107.442 180.34 90)
 			(hide yes)
 			(show_name no)
@@ -13039,7 +13242,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-8_W7.62mm_LongPads"
 			(at 21.59 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -13380,7 +13583,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm"
 			(at 225.7552 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -13462,7 +13665,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_LCC:PLCC-44_16.6x16.6mm_P1.27mm"
+		(property "Footprint" "Capacitor_THT:CP_Radial_D4.0mm_P1.50mm"
 			(at 155.9052 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -13544,7 +13747,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm"
 			(at 122.8852 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -13860,7 +14063,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_LongPads"
 			(at 262.89 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -14062,7 +14265,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm"
 			(at 40.3352 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -14226,7 +14429,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm"
 			(at 190.1952 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -14618,7 +14821,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 212.09 88.138 90)
 			(hide yes)
 			(show_name no)
@@ -14700,7 +14903,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 146.812 64.77 90)
 			(hide yes)
 			(show_name no)
@@ -14782,7 +14985,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 159.258 33.02 90)
 			(hide yes)
 			(show_name no)
@@ -14942,7 +15145,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 103.378 36.83 90)
 			(hide yes)
 			(show_name no)
@@ -15022,7 +15225,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 226.06 76.962 90)
 			(hide yes)
 			(show_name no)
@@ -15181,7 +15384,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 140.208 125.73 90)
 			(hide yes)
 			(show_name no)
@@ -15230,8 +15433,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 90.17 134.62 0)
+		(lib_id "Switch:SW_Push_Dual")
+		(at 97.79 133.35 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15240,9 +15443,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "8644c6b0-12b7-46e8-b489-f158a9df19db")
-		(property "Reference" "SW1"
-			(at 90.17 127.5545 0)
+		(uuid "866dcafa-912a-4efc-9ed1-60a6d44c8bf9")
+		(property "Reference" "SW4"
+			(at 97.79 123.6175 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15252,7 +15455,7 @@
 			)
 		)
 		(property "Value" "Flash"
-			(at 90.17 129.9788 0)
+			(at 97.79 126.0418 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15261,8 +15464,8 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:TO-263-7_TabPin8"
-			(at 90.17 129.54 0)
+		(property "Footprint" "Button_Switch_THT:SW_DIP_SPSTx02_Slide_6.7x6.64mm_W7.62mm_P2.54mm_LowProfile"
+			(at 97.79 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15273,7 +15476,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 90.17 129.54 0)
+			(at 97.79 133.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15283,8 +15486,8 @@
 				)
 			)
 		)
-		(property "Description" "Push button switch, generic, two pins"
-			(at 90.17 134.62 0)
+		(property "Description" "Push button switch, generic, symbol, four pins"
+			(at 97.79 133.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15293,17 +15496,23 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
-		(pin "1"
-			(uuid "064255a5-4c26-4f68-990e-491039e0fa39")
 		)
 		(pin "2"
-			(uuid "57112d8d-f29a-4f6c-99ce-dccc26db734f")
+			(uuid "d1fa5dd2-76e0-41f4-b7d2-86fca5c049b5")
+		)
+		(pin "3"
+			(uuid "3478f214-3100-4b7c-815d-e59602514362")
+		)
+		(pin "1"
+			(uuid "89eef891-2d30-4831-9deb-1a76f230b010")
+		)
+		(pin "4"
+			(uuid "d3f5d7c7-0fc9-4197-a513-09e23b12928d")
 		)
 		(instances
 			(project "Controller"
 				(path "/4060925a-c52c-48a2-a590-88d95c16dad5"
-					(reference "SW1")
+					(reference "SW4")
 					(unit 1)
 				)
 			)
@@ -15499,7 +15708,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm"
 			(at 215.5952 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -15739,7 +15948,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 234.95 112.268 90)
 			(hide yes)
 			(show_name no)
@@ -15821,7 +16030,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm"
 			(at 59.3852 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -15901,7 +16110,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 198.12 85.598 90)
 			(hide yes)
 			(show_name no)
@@ -15983,7 +16192,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 72.898 48.26 90)
 			(hide yes)
 			(show_name no)
@@ -16142,7 +16351,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 89.408 142.24 90)
 			(hide yes)
 			(show_name no)
@@ -16224,7 +16433,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 159.258 45.72 90)
 			(hide yes)
 			(show_name no)
@@ -16382,7 +16591,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_LongPads"
 			(at 271.78 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -16935,86 +17144,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 90.17 124.46 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a8312143-79cf-4f37-a91c-4ae768c42b95")
-		(property "Reference" "SW2"
-			(at 90.17 117.3945 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Reset"
-			(at 90.17 119.8188 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:TO-263-7_TabPin8"
-			(at 90.17 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 90.17 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Push button switch, generic, two pins"
-			(at 90.17 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ba49a784-b21c-4b86-8be4-acc210fbfb56")
-		)
-		(pin "2"
-			(uuid "16b03320-d8a4-49aa-81bf-c8751ac2a6a2")
-		)
-		(instances
-			(project "Controller"
-				(path "/4060925a-c52c-48a2-a590-88d95c16dad5"
-					(reference "SW2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 71.12 106.68 0)
 		(unit 1)
@@ -17202,7 +17331,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_LongPads"
 			(at 271.78 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -17318,7 +17447,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm_IRGrey"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical"
 			(at 19.05 175.26 0)
 			(hide yes)
 			(show_name no)
@@ -17646,7 +17775,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm"
 			(at 274.0152 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -18040,7 +18169,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 72.898 58.42 90)
 			(hide yes)
 			(show_name no)
@@ -18278,7 +18407,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 227.838 39.37 90)
 			(hide yes)
 			(show_name no)
@@ -18360,7 +18489,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 211.328 39.37 90)
 			(hide yes)
 			(show_name no)
@@ -18440,7 +18569,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 210.82 112.268 90)
 			(hide yes)
 			(show_name no)
@@ -18598,7 +18727,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 135.89 76.708 90)
 			(hide yes)
 			(show_name no)
@@ -18678,7 +18807,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-8_W7.62mm_LongPads"
 			(at 91.44 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -18777,7 +18906,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 75.438 142.24 90)
 			(hide yes)
 			(show_name no)
@@ -18936,7 +19065,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 27.178 142.24 90)
 			(hide yes)
 			(show_name no)
@@ -19018,7 +19147,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm"
 			(at 28.9052 26.67 0)
 			(hide yes)
 			(show_name no)
@@ -19101,7 +19230,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm"
 			(at 146.3548 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -19258,7 +19387,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 182.88 74.422 90)
 			(hide yes)
 			(show_name no)
@@ -19308,7 +19437,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 99.06 135.89 0)
+		(at 106.68 132.08 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -19319,7 +19448,7 @@
 		(fields_autoplaced yes)
 		(uuid "df56d367-a834-48fa-b070-aaa6a606ee7b")
 		(property "Reference" "#PWR051"
-			(at 99.06 142.24 0)
+			(at 106.68 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19330,7 +19459,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 99.06 140.0231 0)
+			(at 106.68 136.2131 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19340,7 +19469,7 @@
 			)
 		)
 		(property "Footprint" "RF_Module:ESP-12E"
-			(at 99.06 135.89 0)
+			(at 106.68 132.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19351,7 +19480,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 99.06 135.89 0)
+			(at 106.68 132.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19362,7 +19491,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 99.06 135.89 0)
+			(at 106.68 132.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19418,7 +19547,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm"
 			(at 247.3452 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -19500,7 +19629,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_LCC:PLCC-44_16.6x16.6mm_P1.27mm"
+		(property "Footprint" "Capacitor_THT:CP_Radial_D4.0mm_P1.50mm"
 			(at 20.6248 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -19742,7 +19871,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm"
 			(at 32.7152 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -19900,7 +20029,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_LongPads"
 			(at 210.82 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -20519,7 +20648,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 244.348 39.37 90)
 			(hide yes)
 			(show_name no)
@@ -20646,6 +20775,92 @@
 		)
 	)
 	(symbol
+		(lib_id "Switch:SW_Push_Dual")
+		(at 97.79 118.11 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fa37fde5-668c-4dc3-a6b2-b8c899d9cf41")
+		(property "Reference" "SW3"
+			(at 97.79 108.3775 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Reset"
+			(at 97.79 110.8018 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Button_Switch_THT:SW_DIP_SPSTx02_Slide_6.7x6.64mm_W7.62mm_P2.54mm_LowProfile"
+			(at 97.79 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 97.79 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, symbol, four pins"
+			(at 97.79 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "a6f107bd-ce98-4f0b-9eea-d0f34466369e")
+		)
+		(pin "3"
+			(uuid "c949af75-f5b3-4f19-a235-8124d882b614")
+		)
+		(pin "1"
+			(uuid "82700d93-c8d1-4798-bacc-e0f6f5bc9f1b")
+		)
+		(pin "4"
+			(uuid "b754f71f-a126-4bb1-93a5-b8344ec89328")
+		)
+		(instances
+			(project "Controller"
+				(path "/4060925a-c52c-48a2-a590-88d95c16dad5"
+					(reference "SW3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 259.08 39.37 180)
 		(unit 1)
@@ -20679,7 +20894,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 260.858 39.37 90)
 			(hide yes)
 			(show_name no)
