@@ -3905,6 +3905,172 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Diode:1N5817"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "1N5817"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
+				(at 0 -4.445 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "http://www.vishay.com/docs/88525/1n5817.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "20V 1A Schottky Barrier Rectifier Diode, DO-41"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "diode Schottky"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "D*DO?41*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "1N5817_0_1"
+				(polyline
+					(pts
+						(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "1N5817_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Switch:SW_Push_Dual"
 			(pin_names
 				(offset 1.016)
@@ -5638,6 +5804,16 @@
 		)
 		(uuid "503c3f18-5306-45f2-87ca-52521fa1e3f7")
 	)
+	(text "Suppress backfeeding\nfrom VBus to +5V rail"
+		(exclude_from_sim no)
+		(at 124.46 138.43 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "5923b9ee-9d55-4008-9fae-8c3286161355")
+	)
 	(text "STAR GND at shunt/PSU return region.\nKeep heater current out of analog and MCU ground paths.\nRun separate returns for:\n- heater/shunt\n- analog circuitry\n- Pro Micro / digital\n- 5 V buck"
 		(exclude_from_sim yes)
 		(at 49.53 27.94 0)
@@ -6647,16 +6823,6 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 138.43) (xy 111.76 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3d06a9a2-edc6-4642-a9b6-1919d638dbda")
-	)
-	(wire
-		(pts
 			(xy 97.79 92.71) (xy 97.79 110.49)
 		)
 		(stroke
@@ -7234,6 +7400,16 @@
 			(type default)
 		)
 		(uuid "84885694-b05f-4520-b468-4604035563ca")
+	)
+	(wire
+		(pts
+			(xy 100.33 140.97) (xy 104.14 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "85f4638c-196a-461f-917e-6d0a79208f87")
 	)
 	(wire
 		(pts
@@ -8224,6 +8400,16 @@
 			(type default)
 		)
 		(uuid "fb1020b1-72d5-4fb4-bb79-24ff50892131")
+	)
+	(wire
+		(pts
+			(xy 100.33 138.43) (xy 100.33 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb7321d8-2dfe-43e3-ae1f-94c782b63d41")
 	)
 	(wire
 		(pts
@@ -12323,7 +12509,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 111.76 138.43 0)
+		(at 100.33 138.43 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12334,7 +12520,7 @@
 		(fields_autoplaced yes)
 		(uuid "6cfa0672-36bd-44d7-970b-425f6d9619d1")
 		(property "Reference" "#PWR071"
-			(at 111.76 142.24 0)
+			(at 100.33 142.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12345,7 +12531,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 111.76 134.2969 0)
+			(at 100.33 134.2969 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12355,7 +12541,7 @@
 			)
 		)
 		(property "Footprint" "Converter_ACDC:Converter_ACDC_Hahn_HS-400xx_THT"
-			(at 111.76 138.43 0)
+			(at 100.33 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12366,7 +12552,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 111.76 138.43 0)
+			(at 100.33 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12377,7 +12563,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 111.76 138.43 0)
+			(at 100.33 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15037,6 +15223,86 @@
 				(path "/4060925a-c52c-48a2-a590-88d95c16dad5"
 					(reference "U3")
 					(unit 4)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:1N5817")
+		(at 107.95 140.97 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ad650028-c1bd-423c-88b7-749924f51da7")
+		(property "Reference" "D4"
+			(at 108.2675 135.5555 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N5817"
+			(at 108.2675 137.9798 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
+			(at 107.95 136.525 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.vishay.com/docs/88525/1n5817.pdf"
+			(at 107.95 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "20V 1A Schottky Barrier Rectifier Diode, DO-41"
+			(at 107.95 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "47e82969-d29e-491f-9a39-c32c3e39012d")
+		)
+		(pin "2"
+			(uuid "7b245993-c385-4318-8b37-55a871185d2c")
+		)
+		(instances
+			(project "Controller"
+				(path "/4060925a-c52c-48a2-a590-88d95c16dad5"
+					(reference "D4")
+					(unit 1)
 				)
 			)
 		)
